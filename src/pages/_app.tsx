@@ -1,3 +1,4 @@
+import React from 'react';
 import '@aws-amplify/ui-react/styles.css';
 import { Amplify } from 'aws-amplify';
 import awsconfig from '../aws-exports';
@@ -5,8 +6,7 @@ import type { AppProps } from 'next/app';
 import { Authenticator } from '@aws-amplify/ui-react';
 
 Amplify.configure({
-  ...awsconfig,
-  // this lets you run Amplify code on the server-side in Next.js
+  ...(awsconfig as any),
   ssr: true
 });
 
