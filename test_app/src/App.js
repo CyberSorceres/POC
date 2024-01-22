@@ -8,7 +8,7 @@ const App = () => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        'rn:aws:execute-api:eu-central-1:609938071440:721xnxeo50/*/POST/',
+        'https://721xnxeo50.execute-api.eu-central-1.amazonaws.com/dev',
         { prompt: inputText }
       );
       setApiResponse(JSON.stringify(response.data, null, 2));
